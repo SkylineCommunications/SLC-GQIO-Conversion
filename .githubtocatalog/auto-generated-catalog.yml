@@ -36,7 +36,7 @@ id: 807d1b00-5d2d-4d7c-b59c-70998a3c249e
 #   Max length: 100 characters.
 #   Cannot contain newlines.
 #   Cannot contain leading or trailing whitespace characters.
-title: Conversion
+title: SLC-GQIO-Conversion
 # [Optional]
 # General information about the Catalog item.
 #   Max length: 100,000 characters
@@ -58,11 +58,25 @@ documentation_url:
 # Format: 'name <email> (url)'
 #   The name is required; max 256 characters.
 #   The email and url are optional, and should be in valid email/URL formats.
-owners: []
+owners:
+  - email: sebastian.ulloa@skyline.be
+    name: Sebastian Ulloa
+    url: 
+  - email: carlos.matheus@skyline.be
+    name: Carlos Matheus
+    url: 
 # [Optional]
 # Tags that allow you to categorize your Catalog items.
 #   Max number of tags: 5
 #   Max length: 50 characters.
 #   Cannot contain newlines.
 #   Cannot contain leading or trailing whitespace characters.
-tags: []
+tags:
+  - Custom Operator
+  - Conversion
+  - Convert
+  - Bool
+  - Integer
+  - Double
+  - Date
+  - String
