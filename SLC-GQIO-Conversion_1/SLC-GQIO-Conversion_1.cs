@@ -15,7 +15,7 @@ namespace Conversion
         private GQIStringDropdownArgument _convertToArg;
         private string _newColumnName;
         private GQIColumn _newColumn;
-        private string _converTo;
+        private string _convertTo;
         private GQIColumn _inputColumn;
         private string _exceptionValue;
         private ConversionHelper conversionHelper;
@@ -50,20 +50,20 @@ namespace Conversion
             }
 
             _inputColumn = args.GetArgumentValue(_inputColumnArg);
-            _converTo = args.GetArgumentValue(_convertToArg);
+            _convertTo = args.GetArgumentValue(_convertToArg);
 
             _newColumnName = args.GetArgumentValue(_newColumnNameArg);
 
             if (_newColumnName.IsNullOrEmpty())
             {
-                _newColumnName = $"{_inputColumn.Name} (as {_converTo})";
+                _newColumnName = $"{_inputColumn.Name} (as {_convertTo})";
             }
 
-            var isConversionSupported = IsConversionSupported(_inputColumn.Type.ToString(), _converTo);
+            var isConversionSupported = IsConversionSupported(_inputColumn.Type.ToString(), _convertTo);
 
             if (!isConversionSupported)
             {
-                throw new GenIfException($"Cannot Convert {_inputColumn.Type} to {_converTo}");
+                throw new GenIfException($"Cannot Convert {_inputColumn.Type} to {_convertTo}");
             }
 
             return new OnArgumentsProcessedOutputArgs();
@@ -71,9 +71,9 @@ namespace Conversion
 
         public void HandleColumns(GQIEditableHeader header)
         {
-            if (!Enum.TryParse(_converTo, true, out GQIColumnType newColumnType))
+            if (!Enum.TryParse(_convertTo, true, out GQIColumnType newColumnType))
             {
-                throw new GenIfException($"Unable to parse {_converTo}");
+                throw new GenIfException($"Unable to parse {_convertTo}");
             }
 
             conversionHelper = new ConversionHelper(_inputColumn, newColumnType, _newColumnName, _exceptionValue);
