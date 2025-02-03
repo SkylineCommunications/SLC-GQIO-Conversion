@@ -132,7 +132,7 @@
                     }
                     else
                     {
-                        row.SetValue(newColumn, DateTime.MinValue, exceptionValue);
+                        row.SetValue(newColumn, DateTime.MinValue.ToUniversalTime(), exceptionValue);
                     }
 
                     break;
@@ -165,12 +165,12 @@
                     }
                     else
                     {
-                        row.SetValue(newColumn, timeSpanValue != TimeSpan.Zero, exceptionValue);
+                        row.SetValue(newColumn, TimeSpan.Zero, exceptionValue);
                     }
 
                     break;
                 default:
-                    throw new NotSupportedException($"Conversion from String to {toType} is not supported.");
+                    throw new GenIfException($"Conversion from String to {toType} is not supported.");
             }
         }
 
@@ -188,7 +188,7 @@
                     }
                     else
                     {
-                        row.SetValue(newColumn, DateTime.MinValue, exceptionValue);
+                        row.SetValue(newColumn, DateTime.MinValue.ToUniversalTime(), exceptionValue);
                     }
 
                     break;
@@ -199,7 +199,7 @@
                     row.SetValue(newColumn, Convert.ToDouble(input));
                     break;
                 default:
-                    throw new NotSupportedException($"Conversion from Int to {toType} is not supported.");
+                    throw new GenIfException($"Conversion from Int to {toType} is not supported.");
             }
         }
 
@@ -217,7 +217,7 @@
                     row.SetValue(newColumn, input.TimeOfDay);
                     break;
                 default:
-                    throw new NotSupportedException($"Conversion from DateTime to {toType} is not supported.");
+                    throw new GenIfException($"Conversion from DateTime to {toType} is not supported.");
             }
         }
 
@@ -232,7 +232,7 @@
                     row.SetValue(newColumn, input.ToString());
                     break;
                 default:
-                    throw new NotSupportedException($"Conversion from Boolean to {toType} is not supported.");
+                    throw new GenIfException($"Conversion from Boolean to {toType} is not supported.");
             }
         }
 
@@ -256,12 +256,12 @@
                     }
                     else
                     {
-                        row.SetValue(newColumn, DateTime.MinValue, exceptionValue);
+                        row.SetValue(newColumn, DateTime.MinValue.ToUniversalTime(), exceptionValue);
                     }
 
                     break;
                 default:
-                    throw new NotSupportedException($"Conversion from Double to {toType} is not supported.");
+                    throw new GenIfException($"Conversion from Double to {toType} is not supported.");
             }
         }
 
