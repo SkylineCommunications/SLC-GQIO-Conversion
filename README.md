@@ -1,6 +1,6 @@
-# SLC-GQIO-Conversion
+# Data Transformer
 
-This repository contains a GQI custom operator, designed to facilitate type conversions. These tools provide robust support for converting data columns between multiple types while maintaining flexibility and configurability.
+This package contains a GQI custom operator, designed to facilitate type conversions. These tools provide robust support for converting data columns between multiple types while maintaining flexibility and configurability.
 
 ## Features
 
