@@ -1,21 +1,18 @@
 # Data Transformer
 
-This package contains a GQI custom operator, designed to facilitate type conversions. These tools provide robust support for converting data columns between multiple types while maintaining flexibility and configurability.
+This package provides a **Ad hoc custom operator** designed for seamless type conversions across multiple data formats. Whether you're working with strings, numbers, dates, or boolean values, this tool ensures data consistency and flexibility.
 
-## Features
+## Key Features
 
-- **Supported Type Conversions:**
-  - String ↔ Int, DateTime, Boolean, Double, TimeSpan
-  - Int ↔ String, DateTime, Boolean, Double
-  - DateTime ↔ String, Double, TimeSpan
-  - Boolean ↔ String, Int
-  - Double ↔ String, Int, Boolean, DateTime
-  - TimeSpan ↔ String
+🔹 **Versatile Type Conversions** – Effortlessly convert between various data types:
+  - **String** ↔ Int, DateTime, Boolean, Double, TimeSpan
+  - **Int** ↔ String, DateTime, Boolean, Double
+  - **DateTime** ↔ String, Double, TimeSpan
+  - **Boolean** ↔ String, Int
+  - **Double** ↔ String, Int, Boolean, DateTime
+  - **TimeSpan** ↔ String
 
-- **Customizable Exception Handling:**
-  - Specify default values for invalid conversions.
-  - If no value is specified the default would be *N/A*
-  
-- **Dynamic Column Addition:**
-  - Automatically creates and adds new columns with the converted data type.
-  - If no name is specified for the new column, the new name will be shown as *Column Name* (as *type*) -> e.g My Column (as double)
+🔹 **Customizable Exception Handling** – Define default values for invalid conversions. If none are specified, the default value will be *N/A*.
+
+🔹 **Dynamic Column Addition** – Automatically generates new columns with the converted data type.
+  - If no column name is provided, the default format will be *Column Name (as Type)* (e.g., `My Column (as double)`).
