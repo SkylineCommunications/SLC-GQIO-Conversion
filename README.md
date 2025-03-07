@@ -16,3 +16,7 @@ This package provides a **Ad hoc custom operator** designed for seamless type co
 
 🔹 **Dynamic Column Addition** – Automatically generates new columns with the converted data type.
   - If no column name is provided, the default format will be *Column Name (as Type)* (e.g., `My Column (as double)`).
+
+For **technical details**, advanced configuration, and troubleshooting, refer to the **full documentation** for each script:
+
+- 📄 [SLC-GQIO-Conversion Readme](https://github.com/SkylineCommunications/SLC-GQIO-Conversion/blob/master/SLC-GQIO-Conversion_1/README.md)
