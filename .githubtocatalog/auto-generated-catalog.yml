@@ -41,7 +41,7 @@ title: Data Transformer
 # General information about the Catalog item.
 #   Max length: 100,000 characters
 # Currently not shown in the Catalog UI but will be supported in the near future.
-short_description: No description available
+short_description: This package provides a Ad hoc custom operator designed for seamless type conversions across multiple data formats.
 # [Optional]
 # A valid URL that points to the source code.
 #   A valid URL
