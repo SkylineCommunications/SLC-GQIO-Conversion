@@ -35,11 +35,6 @@ id: 807d1b00-5d2d-4d7c-b59c-70998a3c249e
 #   Cannot contain leading or trailing whitespace characters.
 title: Data Transformer
 # [Optional]
-# General information about the Catalog item.
-#   Max length: 100,000 characters
-# Currently not shown in the Catalog UI but will be supported in the near future.
-short_description: No description available
-# [Optional]
 # A valid URL that points to the source code.
 #   A valid URL
 #   Max length: 2048 characters
